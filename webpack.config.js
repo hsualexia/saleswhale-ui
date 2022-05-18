@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: {
     app: ['./src/index.js']
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+    path: path.resolve(__dirname, 'src'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -30,11 +30,26 @@ module.exports = {
         use: ['babel-loader']
       },
       {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
         test: /\.less$/,
         use: [
           'style-loader',
           'css-loader',
-          'less-loader',
+          {
+            loader: 'less-loader',
+            options:
+              {
+                lessOptions: {
+                  javascriptEnabled: true
+                }
+              }
+          }
         ],
       },
     ]

@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import SalesWhaleApp from './SalesWhaleApp';
 
-const element = document.getElementById('root');
-ReactDOM.render(<SalesWhaleApp />, element);
+const container = document.getElementById('root');
+const root = createRoot(container)
+root.render(<SalesWhaleApp />);

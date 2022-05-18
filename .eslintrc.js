@@ -33,6 +33,12 @@ module.exports = {
     'react/jsx-closing-tag-location': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-no-useless-fragment': 0,
-    semi: 0
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': 0,
+    'react/jsx-tag-spacing': 0,
+    'react/no-unknown-property': 0,
+    'import/no-useless-paths-segments': 0,
+    semi: 0,
+    quotes: 0
   },
 };
