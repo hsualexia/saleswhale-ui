@@ -38,7 +38,9 @@ module.exports = {
     'react/jsx-tag-spacing': 0,
     'react/no-unknown-property': 0,
     'import/no-useless-paths-segments': 0,
+    'object-curly-newline': 0,
+    'camelcase': 0,
     semi: 0,
-    quotes: 0
+    quotes: 0,
   },
 };

@@ -29,16 +29,3 @@ export const LinkStyled = styled.div`
 export const LogoStyled = styled.div`
   margin: 20px;
 `;
-// export const MenuStyled = styled(Menu)`
-//   &.ant-menu.ant-menu-dark {
-//     background: #042235;
-//   }
-
-//   & .ant-menu-item {
-//     margin: 30px 0px;
-//   }
-
-//   &.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
-//     background-color: #042235;
-//   }
-// `;

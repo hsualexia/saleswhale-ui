@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Row } from 'antd';
 
 import {
@@ -8,8 +8,8 @@ import {
   LeadsIcon,
   ReportsIcon,
   HelpIcon,
-} from "../../asset/img";
-import { SideBar, LinkStyled, LogoStyled } from "./styled";
+} from '../../asset/img';
+import { SideBar, LinkStyled, LogoStyled } from './styled';
 
 const LeftMenuBar = () => {
   return <SideBar>

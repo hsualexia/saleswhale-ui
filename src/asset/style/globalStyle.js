@@ -26,10 +26,18 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: row;
+`;
+
+export const MainPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(100vw - 80px);
 `;
 
 export const ContentStyled = styled.div`
-  background-color: #E5E5E5;
+  background-color: #FFF;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 `;
