@@ -1,6 +1,8 @@
 import React from 'react';
 import { Row } from 'antd';
+import { Link, useLocation } from 'react-router-dom';
 
+import { ROUTES } from '../../routes';
 import {
   Logo,
   CampaignIcon,
@@ -12,26 +14,27 @@ import {
 import { SideBar, LinkStyled, LogoStyled } from './styled';
 
 const LeftMenuBar = () => {
+  const {pathname = ''} = useLocation();
   return <SideBar>
     <Row>
       <LogoStyled>
-        <Logo />
+        <Link to={ROUTES.BASE}><Logo /></Link>
       </LogoStyled>
-      <LinkStyled>
-        <CampaignIcon />
+      <LinkStyled isActive={ROUTES.CAMPAIGN === pathname}>
+        <Link to={ROUTES.CAMPAIGN}><CampaignIcon /></Link>
       </LinkStyled>
-      <LinkStyled>
-        <TeamsIcon />
+      <LinkStyled isActive={ROUTES.TEAMS === pathname}>
+        <Link to={ROUTES.TEAMS}><TeamsIcon /></Link>
       </LinkStyled>
-      <LinkStyled>
-        <LeadsIcon />
+      <LinkStyled isActive={ROUTES.CONTACTS === pathname}>
+        <Link to={ROUTES.CONTACTS}><LeadsIcon /></Link>
       </LinkStyled>
-      <LinkStyled>
-        <ReportsIcon />
+      <LinkStyled isActive={ROUTES.REPORTS === pathname}>
+        <Link to={ROUTES.REPORTS}><ReportsIcon /></Link>
       </LinkStyled>
     </Row>
-    <LinkStyled>
-      <HelpIcon />
+    <LinkStyled isActive={ROUTES.HELP === pathname}>
+      <Link to={ROUTES.HELP}><HelpIcon /></Link>
     </LinkStyled>
   </SideBar>
 };

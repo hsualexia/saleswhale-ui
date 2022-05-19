@@ -15,13 +15,10 @@ export const LinkStyled = styled.div`
   justify-content: center;
   width: 100%;
   padding: 24px 0px;
+  ${props => props.isActive ? 'background: #2995DA;' : null}
 
   :hover {
     cursor: pointer;
-    background: #2995DA;
-  }
-
-  :active {
     background: #2995DA;
   }
 `;
