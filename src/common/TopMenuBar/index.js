@@ -20,7 +20,7 @@ const TopMenuBar = () => {
     </Container>
     <UserContainer>
       <Popover placement="bottom" content="Some Notifications" trigger="hover">
-        <Badge title="" count={currentUser.notifications_count}><ContainerOutlined style={{ fontSize: '20px' }}/></Badge>
+        <Badge color="#2995DA" title="" count={currentUser.notifications_count}><ContainerOutlined style={{ fontSize: '20px' }}/></Badge>
       </Popover>
       <TextStyled>Hello, {currentUser.name}</TextStyled>
       <Avatar src={currentUser.avatar} size="large"/>

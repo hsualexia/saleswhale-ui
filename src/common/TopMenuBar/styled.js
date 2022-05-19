@@ -26,6 +26,7 @@ export const UserContainer = styled.div`
 
 export const TextStyled = styled.div`
   margin-left: 25px;
+  font-weight: 600;
   font-size: 14px;
   opacity: 0.5;
   color: #1A1919;
@@ -33,8 +34,10 @@ export const TextStyled = styled.div`
 
 export const NarWhalStyled = styled.div`
   display: flex;
+  width: 166px;
+  font-weight: 600;
   align-items: center;
-  padding: 0px 24px;
+  justify-content: center;
   color: #1A1919;
   opacity: 0.5;
   border-right-style: solid;
