@@ -32,8 +32,8 @@ export const Container = styled.div`
 export const MainPanel = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: calc(100vw - 80px);
+  margin-left: 80px;
+  width: 100%;
 `;
 
 export const ContentStyled = styled.div`
