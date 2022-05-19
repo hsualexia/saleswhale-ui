@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
-    font-family: 'ProximaNova', sans-serif;
-    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 
@@ -34,10 +34,11 @@ export const MainPanel = styled.div`
   flex-direction: column;
   margin-left: 80px;
   width: 100%;
+  min-height: 100vh;
 `;
 
 export const ContentStyled = styled.div`
-  background-color: #E2E2E2;
+  background-color: #F1F4F8;
   width: 100%;
   height: 100%;
 `;
