@@ -1,20 +1,21 @@
 import React from 'react';
 import { Avatar, Badge, Popover } from 'antd';
 import { ContainerOutlined, CaretDownOutlined } from '@ant-design/icons';
+import { useLocation } from 'react-router-dom'
 
 import { current_user as currentUser } from '../../asset/data';
 import { TopBar, Container, UserContainer, TextStyled, NarWhalStyled, TeamsStyled } from './styled';
 
 const TopMenuBar = () => {
-  // eslint-disable-next-line
-  console.log(currentUser)
+  const {pathname = ''} = useLocation();
+  const title = pathname.split("/")[1].charAt(0).toUpperCase() + pathname.slice(2)
   return <TopBar>
     <Container>
       <NarWhalStyled>
         NARWHAL
       </NarWhalStyled>
       <TeamsStyled>
-        Teams
+        {title}
       </TeamsStyled>
     </Container>
     <UserContainer>
