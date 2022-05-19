@@ -24,27 +24,37 @@ const LeftMenuBar = () => {
   }
   return <SideBar>
     <Row>
-      <LogoStyled>
-        <Link to={ROUTES.BASE}><Logo /></Link>
-      </LogoStyled>
-      <LinkStyled isActive={isLinkActive(ROUTES.CAMPAIGN)}>
-        <Link to={ROUTES.CAMPAIGN}><CampaignIcon /></Link>
-      </LinkStyled>
-      <LinkStyled isActive={isLinkActive(ROUTES.TEAMS)}>
-        <Link to={ROUTES.TEAMS}>
+      <Link to={ROUTES.BASE}>
+        <LogoStyled>
+          <Logo />
+        </LogoStyled>
+      </Link>
+      <Link to={ROUTES.CAMPAIGN}>
+        <LinkStyled isActive={isLinkActive(ROUTES.CAMPAIGN)}>
+          <CampaignIcon/>
+        </LinkStyled>
+      </Link>
+      <Link to={ROUTES.TEAMS}>
+        <LinkStyled isActive={isLinkActive(ROUTES.TEAMS)}>
           {isLinkActive(ROUTES.TEAMS) ? <TeamsIconWhite /> : <TeamsIcon/>}
-        </Link>
-      </LinkStyled>
-      <LinkStyled isActive={isLinkActive(ROUTES.CONTACTS)}>
-        <Link to={ROUTES.CONTACTS}><LeadsIcon /></Link>
-      </LinkStyled>
-      <LinkStyled isActive={isLinkActive(ROUTES.REPORTS)}>
-        <Link to={ROUTES.REPORTS}><ReportsIcon /></Link>
-      </LinkStyled>
+        </LinkStyled>
+      </Link>
+      <Link to={ROUTES.CONTACTS}>
+        <LinkStyled isActive={isLinkActive(ROUTES.CONTACTS)}>
+          <LeadsIcon/>
+        </LinkStyled>
+      </Link>
+      <Link to={ROUTES.REPORTS}>
+        <LinkStyled isActive={isLinkActive(ROUTES.REPORTS)}>
+          <ReportsIcon/>
+        </LinkStyled>
+      </Link>
     </Row>
-    <LinkStyled isActive={isLinkActive(ROUTES.HELP)}>
-      <Link to={ROUTES.HELP}><HelpIcon /></Link>
-    </LinkStyled>
+    <Link to={ROUTES.HELP}>
+      <LinkStyled isActive={isLinkActive(ROUTES.HELP)}>
+        <HelpIcon/>
+      </LinkStyled>
+    </Link>
   </SideBar>
 };
 

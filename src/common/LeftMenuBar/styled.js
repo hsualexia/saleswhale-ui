@@ -9,12 +9,13 @@ export const SideBar = styled.div`
   background: #042235;
   justify-content: space-between;
   align-items: center;
+  overflow: auto;
 `;
 
 export const LinkStyled = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 80px;
   padding: 24px 0px;
   ${props => props.isActive ? 'background: #2995DA;' : null}
 
