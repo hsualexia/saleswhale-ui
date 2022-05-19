@@ -73,4 +73,3 @@ const TeamsData = ({filterData}) => {
 };
 
 export default TeamsData;
-
