@@ -44,6 +44,7 @@ module.exports = {
     'object-curly-newline': 0,
     'arrow-parens': 0,
     'camelcase': 0,
+    'react/jsx-boolean-value': 0,
     semi: 0,
     quotes: 0,
   },

@@ -8,6 +8,7 @@ import {
   CampaignIcon,
   TeamsIcon,
   LeadsIcon,
+  TeamsIconWhite,
   ReportsIcon,
   HelpIcon,
 } from '../../asset/img';
@@ -15,25 +16,33 @@ import { SideBar, LinkStyled, LogoStyled } from './styled';
 
 const LeftMenuBar = () => {
   const {pathname = ''} = useLocation();
+  const isLinkActive = url => {
+    if (url === pathname) {
+      return true
+    }
+    return false
+  }
   return <SideBar>
     <Row>
       <LogoStyled>
         <Link to={ROUTES.BASE}><Logo /></Link>
       </LogoStyled>
-      <LinkStyled isActive={ROUTES.CAMPAIGN === pathname}>
+      <LinkStyled isActive={isLinkActive(ROUTES.CAMPAIGN)}>
         <Link to={ROUTES.CAMPAIGN}><CampaignIcon /></Link>
       </LinkStyled>
-      <LinkStyled isActive={ROUTES.TEAMS === pathname}>
-        <Link to={ROUTES.TEAMS}><TeamsIcon /></Link>
+      <LinkStyled isActive={isLinkActive(ROUTES.TEAMS)}>
+        <Link to={ROUTES.TEAMS}>
+          {isLinkActive(ROUTES.TEAMS) ? <TeamsIconWhite /> : <TeamsIcon/>}
+        </Link>
       </LinkStyled>
-      <LinkStyled isActive={ROUTES.CONTACTS === pathname}>
+      <LinkStyled isActive={isLinkActive(ROUTES.CONTACTS)}>
         <Link to={ROUTES.CONTACTS}><LeadsIcon /></Link>
       </LinkStyled>
-      <LinkStyled isActive={ROUTES.REPORTS === pathname}>
+      <LinkStyled isActive={isLinkActive(ROUTES.REPORTS)}>
         <Link to={ROUTES.REPORTS}><ReportsIcon /></Link>
       </LinkStyled>
     </Row>
-    <LinkStyled isActive={ROUTES.HELP === pathname}>
+    <LinkStyled isActive={isLinkActive(ROUTES.HELP)}>
       <Link to={ROUTES.HELP}><HelpIcon /></Link>
     </LinkStyled>
   </SideBar>

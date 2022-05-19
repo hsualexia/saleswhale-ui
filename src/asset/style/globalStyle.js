@@ -37,7 +37,7 @@ export const MainPanel = styled.div`
 `;
 
 export const ContentStyled = styled.div`
-  background-color: #FFF;
+  background-color: #E2E2E2;
   width: 100%;
   height: 100%;
 `;
