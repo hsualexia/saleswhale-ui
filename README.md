@@ -1,7 +1,7 @@
 # saleswhale-ui
 
 ## Set-up
-1. Git clone repository 
+1. Git clone repository `https://github.com/hsualexia/saleswhale-ui.git`
 2. In local terminal, navigate from workspace folder to cloned repo `cd saleswhale-ui`
 3. In terminal, run `npm install`
 4. Once installation is complete, run `npm run start`
