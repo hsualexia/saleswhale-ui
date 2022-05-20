@@ -6,6 +6,9 @@
 3. In terminal, run `npm install`
 4. Once installation is complete, run `npm run start`
 5. Open webpage in any browser (tested in Edge, Mozilla and Chrome) `http://localhost:8080/#/teams`
+6. Screen to expect:
+![image](https://user-images.githubusercontent.com/105763618/169443311-d5ad5609-ce4f-4026-9cd2-fdfc07e88edd.png)
+
 
 ## Functionalities & How to Test (after set-up is complete)
 ### Tab Filters on Teams page
