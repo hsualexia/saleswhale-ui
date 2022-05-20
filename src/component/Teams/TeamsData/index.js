@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Col, Card, Avatar} from 'antd';
 
 import { teams } from '../../../asset/data';
@@ -41,7 +42,7 @@ const TeamsData = ({filterData}) => {
       <Col><TitleStyled>{filterTitle(filterData)}</TitleStyled></Col>
       <Col>
         <ShowingStyled>
-          Showing out {counter(filterData)} of {counter(filterData)} teams
+          Showing {counter(filterData)} out of {counter(filterData)} teams
         </ShowingStyled>
       </Col>
     </TitleRow>
@@ -71,5 +72,9 @@ const TeamsData = ({filterData}) => {
     </CardRow>
   </Container>
 };
+
+TeamsData.propTypes = {
+  filterData: PropTypes.string.isRequired
+}
 
 export default TeamsData;
